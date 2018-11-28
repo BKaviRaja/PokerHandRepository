@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="PokerHandConsoleApp">
+      <HintPath>..\PokerHandConsoleApp\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.dll</HintPath>
+    </Reference>
     <Reference Include="PokerHandWebApp">
       <HintPath>..\..\PokerHandWebApp\PokerHandWebApp\bin\Debug\netcoreapp2.1\PokerHandWebApp.dll</HintPath>
     </Reference>

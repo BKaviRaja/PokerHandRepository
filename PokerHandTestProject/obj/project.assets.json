@@ -5860,11 +5860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandTestProject\\PokerHandTestProject.csproj",
+      "projectUniqueName": "E:\\PokerHand\\PokerHandTestProject\\PokerHandTestProject.csproj",
       "projectName": "PokerHandTestProject",
-      "projectPath": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandTestProject\\PokerHandTestProject.csproj",
+      "projectPath": "E:\\PokerHand\\PokerHandTestProject\\PokerHandTestProject.csproj",
       "packagesPath": "C:\\Users\\kavithar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandTestProject\\obj\\",
+      "outputPath": "E:\\PokerHand\\PokerHandTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

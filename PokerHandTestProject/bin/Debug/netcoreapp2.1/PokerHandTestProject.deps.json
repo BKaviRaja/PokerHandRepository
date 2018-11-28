@@ -11,7 +11,7 @@
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0",
-          "PokerHandWebApp": "1.0.0.0"
+          "PokerHandConsoleApp": "1.0.0.0"
         },
         "runtime": {
           "PokerHandTestProject.dll": {}
@@ -1054,9 +1054,9 @@
           "Microsoft.NET.Test.Sdk": "15.9.0"
         }
       },
-      "PokerHandWebApp/1.0.0.0": {
+      "PokerHandConsoleApp/1.0.0.0": {
         "runtime": {
-          "PokerHandWebApp.dll": {
+          "PokerHandConsoleApp.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1602,7 +1602,7 @@
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
-    "PokerHandWebApp/1.0.0.0": {
+    "PokerHandConsoleApp/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
