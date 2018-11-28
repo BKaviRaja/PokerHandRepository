@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandConsoleApp\\PokerHandConsoleApp.csproj",
+      "projectUniqueName": "E:\\PokerHand\\PokerHandConsoleApp\\PokerHandConsoleApp.csproj",
       "projectName": "PokerHandConsoleApp",
-      "projectPath": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandConsoleApp\\PokerHandConsoleApp.csproj",
+      "projectPath": "E:\\PokerHand\\PokerHandConsoleApp\\PokerHandConsoleApp.csproj",
       "packagesPath": "C:\\Users\\kavithar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kavithar\\source\\repos\\PokerHandTestProject\\PokerHandConsoleApp\\obj\\",
+      "outputPath": "E:\\PokerHand\\PokerHandConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
