@@ -16,7 +16,6 @@ namespace PokerHandTestProject
         [InlineData("8c 7c 6c 5c 4p", "Invalid Data")]
         public void PokerHandInputValidTestEvaluation(string PokerHandValue, string expectedOutput)
         {
-
             //act and assert
             Assert.Equal(expectedOutput, (PKObj.ValidatePokerHandInput(PokerHandValue)));
         }

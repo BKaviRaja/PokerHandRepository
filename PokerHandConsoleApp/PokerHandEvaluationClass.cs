@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PokerHandConsoleApp
 {
-   public class PokerHandEvaluationClass
+    public class PokerHandEvaluationClass
     {
         public String Evaluate(string PokersHandInput)
         {
@@ -26,6 +26,7 @@ namespace PokerHandConsoleApp
                     else
                     {
                         PokerHandType = false;
+                        PokerHandOutput = "";
                         i = PokersHandInputArray.Length;
                     }
                 }
@@ -38,6 +39,7 @@ namespace PokerHandConsoleApp
                         {
                             rank = (PokersHandInputArray[i])[0];
                             PokerHandOutput = "Straigh Flush";
+                            PokerHandOutput = "";
                             PokerHandType = true;
                         }
                         else
@@ -56,10 +58,31 @@ namespace PokerHandConsoleApp
             }
         }
 
-        public IEnumerable<char> ValidatePokerHandInput(string pokerHandValue)
+        public string ValidatePokerHandInput(string PokerHandInputValue)
         {
-            throw new NotImplementedException();
+            string[] PokersHandInputArray = PokerHandInputValue.Split(null);
+            String PokerHandOutput = string.Empty;
+            if (PokersHandInputArray.Length == 5)
+            {
+                for (int i = 0; i < PokersHandInputArray.Length; i++)
+                {                    
+                    if (!Enum.IsDefined(typeof(PokerHandData.Suit), ((PokersHandInputArray[i])[1]).ToString()))
+                    {
+                        i = PokersHandInputArray.Length;
+                        PokerHandOutput = "Invalid Data";
+                    }
+                    
+                }
+            }
+            else
+            {
+                PokerHandOutput = "Invalid Data";
+            }
+            if (PokerHandOutput != "Invalid Data")
+                PokerHandOutput = "Valid Data";
+            return PokerHandOutput;
         }
     }
+
 
 }
