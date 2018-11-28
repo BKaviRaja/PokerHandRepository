@@ -19,9 +19,18 @@ namespace PokerHandTestProject
             //act and assert
             Assert.Equal(expectedOutput, (PKObj.ValidatePokerHandInput(PokerHandValue)));
         }
+       // [Fact]
+       // //[InlineData("Ac Kc Qc Jc Tc", "Valid Data")]
+       //// [InlineData(string.Empty)]
+       // public void PokerHandInputValidTestEvaluation1()
+       // {
+       //      ArgumentException Exception = new ArgumentException();
+       //     //act and assert
+       //     Assert.Equal(Exception.Message, (PKObj.ValidatePokerHandInput(null)));
+       // }
         [Theory]
         [InlineData("Ac Kc Qc Jc Tc", "Royal Flush")]
-        [InlineData("Ac As Jc Tc Ts", "")]
+        [InlineData("Ac As Jc Tc Ts", "No Match")]
         public void PokerHandRoyalFlushEvaluation(string PokerHandValue, string expectedOutput)
         {
             //act and assert
@@ -29,7 +38,7 @@ namespace PokerHandTestProject
         }
         [Theory]
         [InlineData("8c 7c 6c 5c 4c", "Straigh Flush")]
-        [InlineData("Ac Kc Qc Jc Ts", "")]
+        [InlineData("Ac Kc Qc Jc Ts", "No Match")]
         public void PokerHandStraightFlushEvaluation(string PokerHandValue, string expectedOutput)
         {
             //act and assert
