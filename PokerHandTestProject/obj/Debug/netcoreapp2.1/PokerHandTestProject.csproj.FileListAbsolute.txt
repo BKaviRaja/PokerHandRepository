@@ -1,0 +1,17 @@
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csprojAssemblyReference.cache
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csproj.CoreCompileInputs.cache
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.AssemblyInfoInputs.cache
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.AssemblyInfo.cs
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.deps.json
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.runtimeconfig.json
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.runtimeconfig.dev.json
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.pdb
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandWebApp.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandWebApp.pdb
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csproj.CopyComplete
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.dll
+C:\Users\kavithar\source\repos\PokerHandTestProject\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.pdb
