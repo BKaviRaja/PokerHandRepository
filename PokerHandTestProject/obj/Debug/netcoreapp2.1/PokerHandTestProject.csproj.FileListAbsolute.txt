@@ -28,7 +28,7 @@ E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.r
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.dll
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.pdb
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.dll
-E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.pdb
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csproj.CopyComplete
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.dll
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.pdb
+E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.pdb

@@ -15,7 +15,11 @@ namespace PokerHandConsoleApp
             {
                 Console.WriteLine();
                 Console.WriteLine(PokerHandObj.Evaluate(PokerHandInputValue));
-            }     
+            }
+            else
+            {
+                Console.WriteLine(PokerHandInputData);
+            }
             
             Console.ReadKey(true);
 
