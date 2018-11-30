@@ -7,7 +7,7 @@ namespace PokerHandConsoleApp
 {
     public class PokerHandData
     {
-        public enum Suit
+        public enum PokerHandSuitValues
         {
             h,
             s,

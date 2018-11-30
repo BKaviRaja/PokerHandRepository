@@ -9,90 +9,136 @@ namespace PokerHandConsoleApp
 {
     public class PokerHandEvaluationClass
     {
-        public String Evaluate(string PokersHandInput)
+        public bool ValidatePokerHandInput(string PokerHandInputValue)
         {
-            String PokerHandOutput = string.Empty;
-            bool PokerHandType = false;
-            try
+            char[] PokerHandRankValueArray = { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'K', 'Q' };
+
+            var PokersHandInputArray = PokerHandInputValue.Split(null);
+            bool isValidPokerHandValue = false;
+
+            if (PokersHandInputArray.Length == 5)
             {
-                string[] PokersHandInputArray = PokersHandInput.Split(null);
-                char[] PokerHandRankValueArray = { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'K', 'Q' };
-                char suit = (PokersHandInputArray[0])[1];
-                char rank = (PokersHandInputArray[0])[0];
-                char[] RoyalFlushValueArray = { 'A', 'K', 'Q', 'J', 'T' };
-                
-                //Logic to evaluate Poker Hand type 
-                if (PokerHandType == false)
+                for (int i = 0; i < PokersHandInputArray.Length; i++)
                 {
-                    Dictionary<char, int> PokerHandKRankdict = new Dictionary<char, int>();
-                    PokerHandKRankdict.Add((PokersHandInputArray[0])[0], 1);
-                    Dictionary<char, int> PokerHandSuitdict = new Dictionary<char, int>();
-                    PokerHandSuitdict.Add((PokersHandInputArray[0])[1], 1);
-                    for (int i = 1; i < PokersHandInputArray.Length; i++)
+                    if (PokersHandInputArray[i].Length == 2)
                     {
-                        if (PokerHandKRankdict.ContainsKey((PokersHandInputArray[i])[0]))
+                        if (PokerHandRankValueArray.Contains((PokersHandInputArray[i])[0]))
                         {
-                            PokerHandKRankdict[(PokersHandInputArray[i])[0]] += 1;
+                            if (Enum.IsDefined(typeof(PokerHandData.PokerHandSuitValues), ((PokersHandInputArray[i])[1]).ToString()))
+                            {                               
+                                isValidPokerHandValue = true;
+                            }
+                            else
+                            {
+                                isValidPokerHandValue = false;
+                                i = PokersHandInputArray.Length;
+                            }
                         }
                         else
                         {
-                            PokerHandKRankdict.Add((PokersHandInputArray[i])[0], 1);
-                        }
-                        if (PokerHandSuitdict.ContainsKey((PokersHandInputArray[i])[1]))
-                        {
-                            PokerHandSuitdict[(PokersHandInputArray[i])[1]] += 1;
-                        }
-                        else
-                        {
-                            PokerHandSuitdict.Add((PokersHandInputArray[i])[1], 1);
-                        }
-                    }
-                    if (PokerHandKRankdict.ContainsValue(5))
-                    {
-                        PokerHandOutput = "Invalid Data";
-                    }
-                    else if (PokerHandKRankdict.ContainsValue(4))
-                    {
-                        PokerHandOutput = "Four of a Kind";
-                    }
-                    else if (PokerHandKRankdict.ContainsValue(3))
-                    {
-                        if (PokerHandKRankdict.ContainsValue(2))
-                        {
-                            PokerHandOutput = "Full House";
-                        }
-                        else
-                        {
-                            PokerHandOutput = "Three of a Kind";
-                        }
-                    }
-                    else if (PokerHandKRankdict.ContainsValue(2))
-                    {
-                        int sum = PokerHandKRankdict.Sum(x => x.Value );                        
-                        var PokerHandPairList = PokerHandKRankdict.Where(PokerHandPair => PokerHandPair.Value== 2);                       
-                        
-                        if (PokerHandPairList.Count() == 2)
-                        {
-                            PokerHandOutput = "Two Pair";
-                        }
-                        else
-                        {
-                            PokerHandOutput = "Pair";
+                            isValidPokerHandValue = false;
+                            i = PokersHandInputArray.Length;
                         }
                     }
                     else
                     {
-                        int PokerHandRankMaxValueIndex = Array.IndexOf<char>(PokerHandRankValueArray, (PokersHandInputArray[0])[0]);
-                        int PokerHandRoyalFlushSequenceCount = 0;
-                        if (PokerHandRankMaxValueIndex >= 4)
+                        isValidPokerHandValue = false;
+                        i = PokersHandInputArray.Length;
+                        
+                    }
+                }
+            }
+            else
+            {
+                isValidPokerHandValue = false;
+            }
+
+            return isValidPokerHandValue;
+        }
+        public String Evaluate(string PokersHandInput)
+        {
+            String pokerHandOutput ="No Match";
+            bool pokerHandType = false;
+            try
+            {
+                string[] pokersHandInputArray = PokersHandInput.Split(null);
+                char[] pokerHandRankValueArray = { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'K', 'Q' };               
+                char suit = (pokersHandInputArray[0])[1];
+                char rank = (pokersHandInputArray[0])[0];
+                char[] royalFlushValueArray = { 'A', 'K', 'Q', 'J', 'T' };
+                
+                //Logic to evaluate Poker Hand type 
+                if (pokerHandType == false)
+                {
+                    Dictionary<char, int> pokerHandKRankdict = new Dictionary<char, int>();
+                    pokerHandKRankdict.Add((pokersHandInputArray[0])[0], 1);
+                    Dictionary<char, int> pokerHandSuitdict = new Dictionary<char, int>();
+                    pokerHandSuitdict.Add((pokersHandInputArray[0])[1], 1);
+                    for (int i = 1; i < pokersHandInputArray.Length; i++)
+                    {
+                        if (pokerHandKRankdict.ContainsKey((pokersHandInputArray[i])[0]))
                         {
-                            int j = PokerHandRankMaxValueIndex;
+                            pokerHandKRankdict[(pokersHandInputArray[i])[0]] += 1;
+                        }
+                        else
+                        {
+                            pokerHandKRankdict.Add((pokersHandInputArray[i])[0], 1);
+                        }
+                        if (pokerHandSuitdict.ContainsKey((pokersHandInputArray[i])[1]))
+                        {
+                            pokerHandSuitdict[(pokersHandInputArray[i])[1]] += 1;
+                        }
+                        else
+                        {
+                            pokerHandSuitdict.Add((pokersHandInputArray[i])[1], 1);
+                        }
+                    }
+                    if (pokerHandKRankdict.ContainsValue(5))
+                    {
+                        pokerHandOutput = "Invalid Data";
+                    }
+                    else if (pokerHandKRankdict.ContainsValue(4))
+                    {
+                        pokerHandOutput = "Four of a Kind";
+                    }
+                    else if (pokerHandKRankdict.ContainsValue(3))
+                    {
+                        if (pokerHandKRankdict.ContainsValue(2))
+                        {
+                            pokerHandOutput = "Full House";
+                        }
+                        else
+                        {
+                            pokerHandOutput = "Three of a Kind";
+                        }
+                    }
+                    else if (pokerHandKRankdict.ContainsValue(2))
+                    {
+                        int sum = pokerHandKRankdict.Sum(x => x.Value );                        
+                        var PokerHandPairList = pokerHandKRankdict.Where(PokerHandPair => PokerHandPair.Value== 2);                       
+                        
+                        if (PokerHandPairList.Count() == 2)
+                        {
+                            pokerHandOutput = "Two Pair";
+                        }
+                        else
+                        {
+                            pokerHandOutput = "Pair";
+                        }
+                    }
+                    else
+                    {
+                        int pokerHandRankMaxValueIndex = Array.IndexOf<char>(pokerHandRankValueArray, (pokersHandInputArray[0])[0]);
+                        int pokerHandRoyalFlushSequenceCount = 0;
+                        if (pokerHandRankMaxValueIndex >= 4)
+                        {
+                            int j = pokerHandRankMaxValueIndex;
                             int i = 0;
                             int PokerHandRankSequenceCount = 0;
 
-                            for (i = 0; i < PokersHandInputArray.Length && j >= 0; i++)
+                            for (i = 0; i < pokersHandInputArray.Length && j >= 0; i++)
                             {
-                                if (PokerHandRankValueArray[j] == (PokersHandInputArray[i])[0])
+                                if (pokerHandRankValueArray[j] == (pokersHandInputArray[i])[0])
                                 {
                                     PokerHandRankSequenceCount += 1;
                                     j--;
@@ -103,45 +149,45 @@ namespace PokerHandConsoleApp
                                 //    j--;
                                 //}
                             }
-                            if (PokerHandRankSequenceCount == 5 && PokerHandSuitdict.ContainsValue(5))
+                            if (PokerHandRankSequenceCount == 5 && pokerHandSuitdict.ContainsValue(5))
                             {
-                                PokerHandOutput = "Straight Flush";
+                                pokerHandOutput = "Straight Flush";
                             }
-                            else if (PokerHandRankSequenceCount == 5 && !PokerHandSuitdict.ContainsValue(5))
+                            else if (PokerHandRankSequenceCount == 5 && !pokerHandSuitdict.ContainsValue(5))
                             {
-                                PokerHandOutput = "Straight";
+                                pokerHandOutput = "Straight";
                             }
-                            else if (PokerHandRankSequenceCount != 5 && PokerHandSuitdict.ContainsValue(5))
+                            else if (PokerHandRankSequenceCount != 5 && pokerHandSuitdict.ContainsValue(5))
                             {
-                                PokerHandOutput = "Flush";
+                                pokerHandOutput = "Flush";
                             }
-                            else if (PokerHandRoyalFlushSequenceCount == 5)
+                            else if (pokerHandRoyalFlushSequenceCount == 5)
                             {
-                                PokerHandOutput = "Royal Flush";
+                                pokerHandOutput = "Royal Flush";
                             }
                         }
                         else
                         {
-                            for (int i = 0; i < PokersHandInputArray.Length; i++)
+                            for (int i = 0; i < pokersHandInputArray.Length; i++)
                             {
-                                if (RoyalFlushValueArray[i] == (PokersHandInputArray[i])[0])
+                                if (royalFlushValueArray[i] == (pokersHandInputArray[i])[0])
                                 {
-                                    PokerHandRoyalFlushSequenceCount += 1;
+                                    pokerHandRoyalFlushSequenceCount += 1;
                                 }
                             }
-                            if (PokerHandRoyalFlushSequenceCount == 5 && PokerHandSuitdict.ContainsValue(5))
+                            if (pokerHandRoyalFlushSequenceCount == 5 && pokerHandSuitdict.ContainsValue(5))
                             {
-                                PokerHandOutput = "Royal Flush";
+                                pokerHandOutput = "Royal Flush";
                             }
-                            else if(PokerHandSuitdict.ContainsValue(5))
+                            else if(pokerHandSuitdict.ContainsValue(5))
                             {
-                                PokerHandOutput = "Flush";
+                                pokerHandOutput = "Flush";
                             }
                         }
                             
                     }
                 }
-                return PokerHandOutput;
+                return pokerHandOutput;
             }
             catch (Exception ex)
             {
@@ -149,55 +195,7 @@ namespace PokerHandConsoleApp
             }
         }
 
-        //public static string GetEnumDescription(Enum value)
-        //{
-        //    FieldInfo fi = value.GetType().GetField(value.ToString());
-
-        //    DescriptionAttribute[] attributes =
-        //        (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
-
-        //    if (attributes != null && attributes.Length > 0)
-        //        return attributes[0].Description;
-        //    else
-        //        return value.ToString();
-        //}
-        public string ValidatePokerHandInput(string PokerHandInputValue)
-        {
-            char[] PokerHandRankValueArray = { 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'K', 'Q' };
-            string[] PokersHandInputArray = PokerHandInputValue.Split(null);
-            String PokerHandOutput = string.Empty;
-
-            if (PokersHandInputArray.Length == 5)
-            {
-                for (int i = 0; i < PokersHandInputArray.Length; i++)
-                {
-                    if (PokersHandInputArray[i].Length == 2)
-                    {
-                        if (!PokerHandRankValueArray.Contains((PokersHandInputArray[i])[0]))
-                        {
-                            i = PokersHandInputArray.Length;
-                            PokerHandOutput = "Invalid Data";
-                        }
-                        if (!Enum.IsDefined(typeof(PokerHandData.Suit), ((PokersHandInputArray[i])[1]).ToString()))
-                        {
-                            i = PokersHandInputArray.Length;
-                            PokerHandOutput = "Invalid Data";
-                        }
-                    }
-                    else
-                    {
-                        i = PokersHandInputArray.Length;
-                        PokerHandOutput = "Invalid Data";
-                    }
-                }
-            }
-            else
-            {
-                PokerHandOutput = "Invalid Data";
-            }
-            if (PokerHandOutput != "Invalid Data")
-                PokerHandOutput = "Valid Data";
-            return PokerHandOutput;
-        }
+       
+       
     }
 }
