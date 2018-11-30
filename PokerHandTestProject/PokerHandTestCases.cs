@@ -13,7 +13,7 @@ namespace PokerHandTestProject
 
         [Theory]
         [InlineData("Ac Kc Qc Jc Tc", true)] 
-        [InlineData("8c 7c 6c 5c 4p", false)]
+        [InlineData("8c 7c 7c 5c 4p", false)]
         public void PokerHandInputValidTestEvaluation(string PokerHandValue, bool expectedOutput)
         {
             //act and assert

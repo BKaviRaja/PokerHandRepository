@@ -24,9 +24,17 @@ namespace PokerHandConsoleApp
                     {
                         if (PokerHandRankValueArray.Contains((PokersHandInputArray[i])[0]))
                         {
-                            if (Enum.IsDefined(typeof(PokerHandData.PokerHandSuitValues), ((PokersHandInputArray[i])[1]).ToString()))
-                            {                               
-                                isValidPokerHandValue = true;
+                            if (PokersHandInputArray.Distinct().Count() == PokersHandInputArray.Count())
+                            {
+                                if (Enum.IsDefined(typeof(PokerHandData.PokerHandSuitValues), ((PokersHandInputArray[i])[1]).ToString()))
+                                {
+                                    isValidPokerHandValue = true;
+                                }
+                                else
+                                {
+                                    isValidPokerHandValue = false;
+                                    i = PokersHandInputArray.Length;
+                                }
                             }
                             else
                             {

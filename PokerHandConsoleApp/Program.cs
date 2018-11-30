@@ -7,7 +7,7 @@ namespace PokerHandConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("PokerHand");            
-            Console.WriteLine("Enter the value of cards");            
+            Console.WriteLine("Enter the value of  five cards");            
             var pokerHandInputValue = Console.ReadLine();
             PokerHandEvaluationClass pokerHand = new PokerHandEvaluationClass();
             bool isValidPokerHandInput = pokerHand.ValidatePokerHandInput(pokerHandInputValue);
