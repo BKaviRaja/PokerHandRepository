@@ -8,3 +8,4 @@ E:\PokerHand\PokerHandConsoleApp\obj\Debug\netcoreapp2.1\PokerHandConsoleApp.Ass
 E:\PokerHand\PokerHandConsoleApp\obj\Debug\netcoreapp2.1\PokerHandConsoleApp.AssemblyInfo.cs
 E:\PokerHand\PokerHandConsoleApp\obj\Debug\netcoreapp2.1\PokerHandConsoleApp.dll
 E:\PokerHand\PokerHandConsoleApp\obj\Debug\netcoreapp2.1\PokerHandConsoleApp.pdb
+E:\PokerHand\PokerHandConsoleApp\obj\Debug\netcoreapp2.1\PokerHandConsoleApp.csprojAssemblyReference.cache

@@ -19,8 +19,6 @@ E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.c
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csproj.CoreCompileInputs.cache
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.AssemblyInfoInputs.cache
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.AssemblyInfo.cs
-E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.dll
-E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.pdb
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
@@ -30,5 +28,7 @@ E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.r
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.dll
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandTestProject.pdb
 E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.dll
-E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.pdb
 E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.csproj.CopyComplete
+E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.dll
+E:\PokerHand\PokerHandTestProject\obj\Debug\netcoreapp2.1\PokerHandTestProject.pdb
+E:\PokerHand\PokerHandTestProject\bin\Debug\netcoreapp2.1\PokerHandConsoleApp.pdb
